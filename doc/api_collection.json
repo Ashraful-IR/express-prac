@@ -1,0 +1,126 @@
+{
+  "info": {
+    "name": "express-prac API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Users",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "dev-secret-key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["users"]
+        }
+      }
+    },
+    {
+      "name": "Get User Details",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "dev-secret-key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/users/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["users", "1"]
+        }
+      }
+    },
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "dev-secret-key",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Ava Turner\",\n  \"email\": \"ava.turner@example.com\",\n  \"age\": 27,\n  \"city\": \"Denver\",\n  \"country\": \"USA\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["users"]
+        }
+      }
+    },
+    {
+      "name": "Update User",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "dev-secret-key",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"city\": \"Austin\",\n  \"age\": 28\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/users/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["users", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete User",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "dev-secret-key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/users/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["users", "1"]
+        }
+      }
+    }
+  ]
+}
